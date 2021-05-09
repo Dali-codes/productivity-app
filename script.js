@@ -43,7 +43,7 @@ const newInput = (topicInput) => {
 
 let counterMinutes = 60;
 let counterSeconds = "00";
-const finish_sound = new Audio("applause.mp3");
+const finish_sound = new Audio("media/applause.mp3");
 
 function initialTime() {
    minutes.innerHTML = counterMinutes;
