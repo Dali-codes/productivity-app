@@ -1,3 +1,5 @@
+![gif of productivity app](https://github.com/Dali-codes/productivity-app/blob/main/media/gif.gif)
+
 # Productivity App
  This Productivity App motivates you to keep coding at least an hour a day. Once you have completed the full hour, you´ll hear a loud applause from a cheering crowd, because you did it again! Well done you! 
  
