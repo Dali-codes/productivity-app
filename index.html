@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Zilla+Slab+Highlight:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Productivity App</title>
+</head>
+<body onload="initialTime()">
+    <main>
+        <button class="btn-mode-toggle"><i class="fas fa-sun"></i></button>
+        <section id="main-wrapper">
+            <div class="countdown-app"> <!--Next challenge: Animate circle-->
+                <h1>My super productive hour</h1>
+                <form action="/nowhere"> <!--Next challenge: Collect form data to create dasboard with topics you´ve worked on and how many hours, or a to-do list to cross out the topics you have practised-->
+                    <label for="topic" id="topic-label">Today´s awesome topic :</label>
+                    <div id="create-topic">
+                        <input type="text" id="topic" name="topic" placeholder="Today I will practise..." required>
+                        <button id="enter-topic"><i class="fas fa-code"></i></button>
+                    </div>
+                </form>
+                <li id="topic-list">
+                </li>
+                <div class="countdown">  
+                    <p id="clock"><span id="minutes"></span> : <span id="seconds"></span></p>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="start"><i class="fas fa-hourglass-start"></i></button>
+                <button id='reset'><i class="fas fa-redo-alt"></i></button>
+            </div>
+        </section>
+	</main>    
+<script src="script.js"></script>
+</body>
+</html>

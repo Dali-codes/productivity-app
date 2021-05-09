@@ -1,0 +1,258 @@
+/* DEVICE SIZE 360px * 640px */
+
+:root {
+	--turquoise: #1EB2A6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    background: radial-gradient(ellipse at center, #126063, #000000);
+    background-repeat: no-repeat;
+}
+
+#main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw; 
+}
+
+/*Toggle button light/dark mode*/
+
+.btn-mode-toggle {
+    color: var(--turquoise); 
+    padding: 5px;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border: 1px solid rgb(240, 226, 226);
+    background-color: rgba(245, 240, 240, 0.911);
+}
+
+.btn-mode-toggle i {
+    font-size: 1.1em;
+}
+
+.light-mode .btn-mode-toggle {
+    background-color: var(--turquoise);    
+    outline: none;
+    padding: 5px;
+    color: #FFF;
+}
+
+.light-mode #main-wrapper {
+    background: #FFFFFF;  
+}
+
+.light-mode .countdown-app h1 {
+    color: var(--turquoise);
+}
+
+.light-mode #topic-label {
+    color: #DE7119;
+}
+
+.light-mode #topic-list {
+    color: var(--turquoise);
+}
+
+.light-mode .countdown {
+    border: solid 8px var(--turquoise);
+}
+
+.light-mode #clock {
+    color:#F77754;
+}
+
+.light-mode .controls > button {
+    border: solid 1px transparent;
+}
+
+
+/*countdown-app content*/
+
+.countdown-app {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.countdown-app h1 {
+    color: #FBEAFF;
+    text-transform: capitalize;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#topic-label {
+    color: rgb(255, 132, 83);
+    opacity: 0.8;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+#create-topic {
+    display: block;
+    margin: 1em auto;
+    font-size: inherit;
+}
+
+#topic, 
+#enter-topic {
+    padding: .4em;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(104, 104, 104);
+    outline-color: var(--turquoise);
+    border: 1px solid rgb(240, 226, 226);
+    border-radius: 5px;
+    background-color: rgba(245, 240, 240, 0.911);
+}
+
+::placeholder {
+    color: rgb(177, 175, 175);
+}
+
+#enter-topic i {
+    color: var(--turquoise);
+    cursor: pointer;
+}
+
+#topic-list {
+    list-style: none;
+    padding-top: 10px;
+    color: #FBEAFF;
+    font-size: 1.5em;  
+    font-family: 'Zilla Slab Highlight', cursive;
+    text-transform: uppercase;
+}
+
+.countdown {
+    margin: 2em auto;  
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    border: solid 5px #FBEAFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clock {
+    font-size: 2em; 
+    color: #FBEAFF;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#minutes, 
+#seconds {
+   padding: .1em;
+   width: 40%;
+}
+
+.controls {
+    display: flex;
+    width: 60%;
+    margin: 1em;
+    justify-content: center;   
+}
+
+.controls > button {
+    padding: .7em;
+    cursor: pointer;   
+    border-radius: 10px;
+    outline: none;
+    margin: 1em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border: 1px solid rgb(240, 226, 226);
+    background-color: rgba(245, 240, 240, 0.911);
+}
+
+.controls > button > i {
+    font-size: 2em;     
+    color:  var(--turquoise);
+    width: 1.5em;
+} 
+
+.controls > button > i:hover {
+    transform: rotate(160deg);
+    transition: 1200ms;
+    opacity: 0;
+}
+
+/*Media queries*/
+
+@media(min-width: 576px) {
+    body {
+        font-size: 18px;
+    }
+
+    .countdown-app #topic-label {
+        font-size: 1.2em;
+    } 
+
+    #topic, 
+    #enter-topic {
+        font-size: .9em;
+        padding: .2em 0;
+    }
+
+    .countdown-app #topic-list {        
+        font-size: 1.4em;
+    }
+
+    .countdown {
+        margin: 1em auto;
+        height: 200px;
+        width: 200px;       
+    }   
+}
+
+@media(min-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+
+    .countdown-app #topic-label {
+        font-size: 1.2em;
+    }
+
+    #topic, 
+    #enter-topic {
+        font-size: .9em;
+        padding: .2em 0;
+    }
+
+    .countdown-app #topic-list {
+        font-size: 1.4em;
+    }
+}
+
+@media(min-width: 991px) {
+    body {
+        font-size: 22px;
+    }   
+}
+
+@media(min-width: 1366px) {
+    body {
+        font-size: 26px;
+    }
+}
+
+
+
